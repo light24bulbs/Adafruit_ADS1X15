@@ -40,7 +40,11 @@ void loop(void)
   Serial.print("AIN1: "); Serial.println(adc1);
   Serial.print("AIN2: "); Serial.println(adc2);
   Serial.print("AIN3: "); Serial.println(adc3);
-  Serial.println(" ");
+  
+  //Or convert representation to volts
+  float voltageScale = 3 // determine from chart above
+  float adc0voltage = (adc0*voltageScale)/1000 
+  Serial.println("AIN0 Voltage: "); Serial.println(adc0voltage)
   
   delay(1000);
 }
